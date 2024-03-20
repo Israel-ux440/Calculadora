@@ -4,6 +4,9 @@
 // requisito 03
 //Nossa calculadora deve ter a possibilidade fazer várias operações de soma e de subtração
 
+ // requisito 04 
+ // Nossa calculadora deve ter a possibilidade de fazer as quatro operações básicas da matemática
+
 
 {
     internal class Program
@@ -22,6 +25,8 @@
 
                 Console.WriteLine("Digite 1 para Adicionar");
                 Console.WriteLine("Digite 2 para subtrair");
+                Console.WriteLine("Digite 3 para multiplicar");
+
 
                 Console.WriteLine("Digite S para sair");
 
@@ -60,6 +65,11 @@
                else if (operacao == "2")
                 {
                     resultado = primeiroNumero - segundoNumero;
+                }
+
+                else if (operacao == "3")
+                {
+                    resultado = primeiroNumero * segundoNumero;
                 }
 
 
