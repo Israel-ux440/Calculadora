@@ -7,6 +7,8 @@
  // requisito 04 
  // Nossa calculadora deve ter a possibilidade de fazer as quatro operações básicas da matemática
 
+ // Requisito 05
+ //
 
 {
     internal class Program
@@ -15,17 +17,20 @@
         {
           
 
-            bool deveContinuar = true;
+            
 
             while (true) 
             {
                 Console.Clear();
 
-                Console.WriteLine("Calculadora Tabajara 2024");
+                Console.WriteLine("Calculadora Tabajara 2024\n");
+
+                Console.WriteLine();
 
                 Console.WriteLine("Digite 1 para Adicionar");
                 Console.WriteLine("Digite 2 para subtrair");
                 Console.WriteLine("Digite 3 para multiplicar");
+                Console.WriteLine("Digite 4 para dividir");
 
 
                 Console.WriteLine("Digite S para sair");
@@ -72,6 +77,10 @@
                     resultado = primeiroNumero * segundoNumero;
                 }
 
+                else if (operacao == "4")
+                {
+                    resultado = primeiroNumero / segundoNumero;
+                }
 
                 Console.WriteLine("O resultado é: " + resultado);
 
