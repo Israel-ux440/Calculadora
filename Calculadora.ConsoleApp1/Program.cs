@@ -8,8 +8,13 @@
  // Nossa calculadora deve ter a possibilidade de fazer as quatro operações básicas da matemática
 
  // Requisito 05
- // nossa calculadora deve realizar as operações com "0"
+ // Nossa calculadora deve realizar as operações com "0"
 
+ // Requisito 06 
+ // Nossa calculadora deve validar as opções do menu
+
+// Requisito 07
+// Nossa calculadora deve realizar  as operações com números com as duas casas decimais 
 {
     internal class Program
     {
@@ -37,10 +42,18 @@
 
                 string operacao = Console.ReadLine();
 
-                if (operacao == "S")
-                {   
-                    
+                if (operacao == "S" || operacao == "s")
                     break;
+
+
+
+
+                if (operacao != "1" && operacao != "2" && operacao != "3" && operacao != "4" && operacao != "S" && operacao != "s")
+                {
+                    Console.WriteLine("Operação inválida, tente novamente!");
+                    Console.ReadLine();
+
+                    continue;
                 }
 
                 Console.WriteLine("Digite o primeiro número");
@@ -51,16 +64,16 @@
 
                 primeiroNumeroString = Console.ReadLine();
 
-                int primeiroNumero = Convert.ToInt32(primeiroNumeroString);
+                double primeiroNumero = Convert.ToDouble(primeiroNumeroString);
 
 
                 Console.WriteLine("Digite o segundo número");
 
                 string segundoNumeroString = Console.ReadLine();
 
-                int segundoNumero = Convert.ToInt32(segundoNumeroString);
+                double segundoNumero = Convert.ToDouble(segundoNumeroString);
 
-                int resultado = 0;
+                double resultado = 0;
 
                 if (operacao == "1")
                 {
