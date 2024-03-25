@@ -8,7 +8,7 @@
  // Nossa calculadora deve ter a possibilidade de fazer as quatro operações básicas da matemática
 
  // Requisito 05
- //
+ // nossa calculadora deve realizar as operações com "0"
 
 {
     internal class Program
@@ -78,7 +78,21 @@
                 }
 
                 else if (operacao == "4")
+
+
                 {
+                    // checar se o numero é 0
+
+                    while(segundoNumero == 0)
+                     // caso for 0, pedir  para o usuário digitar de novo
+                    {
+                        Console.WriteLine("Segundo número não pode ser zero, tente novamente!");
+
+                        Console.WriteLine("Digite o número novamente!");
+
+                        segundoNumero = Convert.ToInt32 (Console.ReadLine()); 
+                    }
+                    
                     resultado = primeiroNumero / segundoNumero;
                 }
 
